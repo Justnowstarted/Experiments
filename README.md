@@ -21,21 +21,14 @@ Being the [src] folder, create a custom package with rosclient libraries with th
 catkin_create_pkg <package_name> rospy roscpp std_msgs
 ```
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+## Other information (workspace folder structure)
 
-```bash
-pip install foobar
-```
+[src]- Place all the packages in this folder and so the CMakelists.txt
 
-## Usage
+[build]- It stores the executable file called MAKE file. 
 
-```python
-import foobar
+[devel]- Compiled programs are stored here. Used to test programs without installation. 
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
