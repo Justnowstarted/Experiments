@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.2)
 project(test_pkg2)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -162,10 +162,17 @@ add_executable(talker src/publisher.cpp)
 add_dependencies(talker ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(talker ${catkin_LIBRARIES})
 
-
 add_executable(listener src/subscriber.cpp)
 add_dependencies(listener ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(listener ${catkin_LIBRARIES})
+
+add_executable(oops_talker src/oops/oops_pub.cpp)
+add_dependencies(oops_talker ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(oops_talker ${catkin_LIBRARIES})
+
+add_executable(oops_listener src/oops/oops_sub.cpp)
+add_dependencies(oops_listener ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(oops_listener ${catkin_LIBRARIES})
 
 
 
