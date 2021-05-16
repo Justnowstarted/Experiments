@@ -3,8 +3,6 @@
 
 #include<sstream>
 
-#include "pkg3_msgs/floatarray.h"
-
 class Publish_{
     private:
         int counter{0};

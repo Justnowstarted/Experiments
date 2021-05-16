@@ -1,1 +1,1 @@
-float abc
+float32 abc
